@@ -14,12 +14,12 @@ object AndroidInfo {
         return getWidthPx(context) / getDensity(context)
     }
 
-    fun getWidthDp(context: Context?): Int {
-        return getWidthPx(context) * (160 / getDensityDpi(context))
+    fun getWidthDp(context: Context?): Float {
+        return getWidthPx(context) * (160.0f / getDensityDpi(context))
     }
 
-    fun getHeightDp(context: Context?): Int {
-        return getHeightPx(context) * (160 / getDensityDpi(context))
+    fun getHeightDp(context: Context?): Float {
+        return getHeightPx(context) * (160.0f / getDensityDpi(context))
     }
 
     fun getDensityDpi(context: Context?): Int {

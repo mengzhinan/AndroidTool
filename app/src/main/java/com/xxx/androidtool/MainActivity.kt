@@ -50,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         sb.append(AndroidInfo.getDensity(context))
         sb.append("\n")
 
+        sb.append("DensityDpi / 160: ")
+        sb.append(AndroidInfo.getDensityDpi(context) / 160.0F)
+        sb.append("\n")
+
         sb.append("DensityDpi: ")
         sb.append(AndroidInfo.getDensityDpi(context))
         sb.append("\n")

@@ -101,4 +101,14 @@ object AndroidInfo {
      */
     val androidSDKVersion: Int
         get() = Build.VERSION.SDK_INT
+
+    /**
+     * App 的 TargetSdk 版本
+     *
+     * @return 如：32
+     */
+    fun getAppTargetSdk(context: Context?): Int {
+        return context?.applicationInfo?.targetSdkVersion ?: -1
+    }
+
 }

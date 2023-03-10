@@ -26,20 +26,20 @@ class MainActivity : AppCompatActivity() {
         sb.append(AndroidInfo.phoneModel)
         sb.append("\n")
 
-        sb.append("Android 系统版本: ")
+        sb.append("手机 Android 版本: ")
         sb.append(AndroidInfo.androidSystemVersion)
         sb.append("\n")
 
-        sb.append("Android SDK 版本: ")
+        sb.append("手机 Android SDK: ")
         sb.append(AndroidInfo.androidSDKVersion)
+        sb.append("\n")
+
+        sb.append("This App TargetSDK: ")
+        sb.append(AndroidInfo.getAppTargetSdk(this))
         sb.append("\n")
 
         sb.append("This App 包名: ")
         sb.append(AndroidInfo.getPackageName(context))
-        sb.append("\n")
-
-        sb.append("This App TargetSDK: ")
-        sb.append(applicationInfo.targetSdkVersion)
         sb.append("\n")
 
         sb.append("App VersionName: ")

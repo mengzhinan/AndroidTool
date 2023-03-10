@@ -34,8 +34,12 @@ class MainActivity : AppCompatActivity() {
         sb.append(AndroidInfo.androidSDKVersion)
         sb.append("\n")
 
-        sb.append("App 包名: ")
+        sb.append("This App 包名: ")
         sb.append(AndroidInfo.getPackageName(context))
+        sb.append("\n")
+
+        sb.append("This App TargetSDK: ")
+        sb.append(applicationInfo.targetSdkVersion)
         sb.append("\n")
 
         sb.append("App VersionName: ")

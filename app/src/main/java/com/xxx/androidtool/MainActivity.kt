@@ -26,6 +26,18 @@ class MainActivity : AppCompatActivity() {
         sb.append(AndroidInfo.phoneModel)
         sb.append("\n")
 
+        sb.append("ABIs: ")
+        sb.append(AndroidInfo.getSupportedABIs())
+        sb.append("\n")
+
+        sb.append("32 Bit: ")
+        sb.append(AndroidInfo.getSupportedBit32())
+        sb.append("\n")
+
+        sb.append("64 Bit: ")
+        sb.append(AndroidInfo.getSupportedBit64())
+        sb.append("\n")
+
         sb.append("手机 Android 版本: ")
         sb.append(AndroidInfo.androidSystemVersion)
         sb.append("\n")

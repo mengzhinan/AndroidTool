@@ -111,4 +111,34 @@ object AndroidInfo {
         return context?.applicationInfo?.targetSdkVersion ?: -1
     }
 
+    fun getSupportedABIs(): String {
+        return arrayToString(Build.SUPPORTED_ABIS)
+    }
+
+    fun getSupportedBit32(): String {
+        return arrayToString(Build.SUPPORTED_32_BIT_ABIS)
+    }
+
+    fun getSupportedBit64(): String {
+        return arrayToString(Build.SUPPORTED_64_BIT_ABIS)
+    }
+
+    private fun arrayToString(arr: Array<String>?): String {
+        if (arr == null || arr.isEmpty()) {
+            return ""
+        }
+        val sb = StringBuffer()
+        for (item: String? in arr) {
+            if (item == null || item.trim().isEmpty()) {
+                continue
+            }
+            sb.append(item)
+            sb.append(",")
+        }
+        if (sb.endsWith(",")) {
+            return sb.substring(0, sb.length - 1)
+        }
+        return sb.toString()
+    }
+
 }
